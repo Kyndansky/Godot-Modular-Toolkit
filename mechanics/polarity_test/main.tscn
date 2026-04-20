@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://fvdco40ce5fw"]
+
+[ext_resource type="Script" uid="uid://7n5hwc1yiy8i" path="res://MagneticComponent.gd" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://cuiy3880scsjn" path="res://icon.svg" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://dmgaumxoe63lp" path="res://player.gd" id="3_h2yge"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xm2m"]
+radius = 232.31013
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(124, 128)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ig7tw"]
+radius = 160.61133
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(124, 128)
+
+[node name="Main" type="Node2D" unique_id=467719186]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1688048631]
+position = Vector2(359, 19)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("3_h2yge")
+
+[node name="MagneticComponent2" type="Area2D" parent="CharacterBody2D" unique_id=47240180 node_paths=PackedStringArray("affected_node")]
+script = ExtResource("1_ig7tw")
+magnetic_strength = 500.0
+is_movable = true
+affected_node = NodePath("..")
+metadata/_custom_type_script = "uid://7n5hwc1yiy8i"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/MagneticComponent2" unique_id=1484471017]
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=2036495638]
+texture = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1562389940]
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="." unique_id=927466791]
+position = Vector2(441, 153)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("3_h2yge")
+
+[node name="MagneticComponent" type="Area2D" parent="CharacterBody2D2" unique_id=1090959830 node_paths=PackedStringArray("affected_node")]
+script = ExtResource("1_ig7tw")
+polarity = -1
+magnetic_strength = 1000.0
+is_movable = true
+affected_node = NodePath("..")
+metadata/_custom_type_script = "uid://7n5hwc1yiy8i"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2/MagneticComponent" unique_id=263679163]
+shape = SubResource("CircleShape2D_ig7tw")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2" unique_id=462273726]
+texture = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2" unique_id=1230359448]
+shape = SubResource("RectangleShape2D_1bvp3")
