@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="polarity_test"
+config/name="2d-magnetic-interaction-system"
 run/main_scene="uid://fvdco40ce5fw"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
