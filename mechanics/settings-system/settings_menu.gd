@@ -1,6 +1,6 @@
 extends PanelContainer
 
-#retrieving and setting various values when the scene is ready
+#initializing button/sliders values based on settings
 func _ready() -> void:
 	%FullscreenCheckbox.button_pressed=Settings.is_fullscreen
 	%MasterVolumeSlider.value=Settings.master_volume_level
@@ -9,10 +9,6 @@ func _ready() -> void:
 
 #SINGALS
 func _on_fullscreen_checkbox_toggled(toggled_on: bool) -> void:
-	if toggled_on==true:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-	else:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	Settings.is_fullscreen=toggled_on
 
 func _on_master_volume_slider_value_changed(value: float) -> void:
