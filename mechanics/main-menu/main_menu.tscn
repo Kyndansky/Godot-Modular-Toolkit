@@ -74,10 +74,12 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/side_margin = 0
-current_tab = 0
+current_tab = 1
 tab_0/title = "Graphics"
+tab_1/title = "Audio"
 
 [node name="GraphicsSettings" type="MarginContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer" unique_id=1778895337]
+visible = false
 layout_direction = 2
 layout_mode = 2
 theme_override_constants/margin_left = 10
@@ -122,6 +124,75 @@ text = "FullScreen"
 unique_name_in_owner = true
 layout_mode = 2
 
+[node name="AudioSettings" type="MarginContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer" unique_id=239992223]
+layout_direction = 2
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+metadata/_tab_index = 1
+metadata/_tab_name = "Audio"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings" unique_id=521966094]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer" unique_id=426917219]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MasterVolumeLabel" type="Label" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer" unique_id=1545483126]
+layout_mode = 2
+text = "Master volumel"
+
+[node name="MasterVolumeSlider" type="HSlider" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer" unique_id=866855959]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer" unique_id=1202532156]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2" unique_id=184567067]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1448969329]
+layout_mode = 2
+
+[node name="MusicVolumeLabel" type="Label" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer" unique_id=2079169754]
+layout_mode = 2
+text = "Music volume"
+
+[node name="MusicVolumeSlider" type="HSlider" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer" unique_id=2079103405]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2" unique_id=1475250250]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2/VBoxContainer2" unique_id=1886508492]
+layout_mode = 2
+
+[node name="SoundEffectsVolumeLabel" type="Label" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer" unique_id=1051613519]
+layout_mode = 2
+text = "Sound effects volume"
+
+[node name="SoundEffectsVolumeSlider" type="HSlider" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer" unique_id=1842913019]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
 [connection signal="pressed" from="OptionsContainer/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="SettingsPanel/VBoxContainer/HBoxContainer2/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="toggled" from="SettingsPanel/VBoxContainer/SettingsTabContainer/GraphicsSettings/HBoxContainer/Column2Container/FullScreen/FullscreenCheckbox" to="." method="_on_fullscreen_check_box_toggled"]
+[connection signal="value_changed" from="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer/MasterVolumeSlider" to="." method="_on_master_volume_slider_value_changed"]
+[connection signal="value_changed" from="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
+[connection signal="value_changed" from="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer/SoundEffectsVolumeSlider" to="." method="_on_sound_effects_volume_slider_value_changed"]
