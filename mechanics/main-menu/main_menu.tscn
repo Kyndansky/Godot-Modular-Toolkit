@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cm66josswpnch"]
 
 [ext_resource type="Script" uid="uid://b4pk8rkuuwftx" path="res://main_menu.gd" id="1_06t4h"]
-[ext_resource type="PackedScene" uid="uid://cci4vny5yacfp" path="res://settings_menu.tscn" id="2_7vrkn"]
 
 [node name="MainMenu" type="Control" unique_id=2004369058]
 layout_mode = 3
@@ -49,7 +48,7 @@ anchor_bottom = 0.7
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="SettingsMenu" parent="SettingsContainer" unique_id=1781473982 instance=ExtResource("2_7vrkn")]
+[node name="SettingsMenu" type="PanelContainer" parent="SettingsContainer" unique_id=1022441232]
 layout_mode = 2
 
 [connection signal="pressed" from="OptionsContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
