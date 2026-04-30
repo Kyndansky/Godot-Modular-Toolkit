@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cm66josswpnch"]
 
 [ext_resource type="Script" uid="uid://b4pk8rkuuwftx" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="PackedScene" uid="uid://cci4vny5yacfp" path="res://settings_menu.tscn" id="2_7vrkn"]
 
 [node name="MainMenu" type="Control" unique_id=2004369058]
 layout_mode = 3
@@ -38,161 +39,18 @@ text = "Settings"
 layout_mode = 2
 text = "Exit"
 
-[node name="SettingsPanel" type="PanelContainer" parent="." unique_id=31024917]
+[node name="SettingsContainer" type="MarginContainer" parent="." unique_id=1567867945]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.2
-anchor_top = 0.25
+anchor_top = 0.3
 anchor_right = 0.8
-anchor_bottom = 0.75
+anchor_bottom = 0.7
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="SettingsPanel" unique_id=33537522]
+[node name="SettingsMenu" parent="SettingsContainer" unique_id=1781473982 instance=ExtResource("2_7vrkn")]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="SettingsPanel/VBoxContainer" unique_id=504787804]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="SettingsPanel/VBoxContainer/HBoxContainer2" unique_id=1549609050]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="SettingsPanel/VBoxContainer/HBoxContainer2/MarginContainer" unique_id=1250744828]
-layout_mode = 2
-text = "Settings"
-horizontal_alignment = 1
-
-[node name="CloseButton" type="Button" parent="SettingsPanel/VBoxContainer/HBoxContainer2" unique_id=1950712814]
-custom_minimum_size = Vector2(30, 0)
-layout_mode = 2
-text = "x
-"
-
-[node name="SettingsTabContainer" type="TabContainer" parent="SettingsPanel/VBoxContainer" unique_id=950322684]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/side_margin = 0
-current_tab = 1
-tab_0/title = "Graphics"
-tab_1/title = "Audio"
-
-[node name="GraphicsSettings" type="MarginContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer" unique_id=1778895337]
-visible = false
-layout_direction = 2
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-metadata/_tab_index = 0
-metadata/_tab_name = "Graphics"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/GraphicsSettings" unique_id=1744749853]
-layout_mode = 2
-
-[node name="Column1Container" type="VBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/GraphicsSettings/HBoxContainer" unique_id=987986123]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Resolution" type="HBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/GraphicsSettings/HBoxContainer/Column1Container" unique_id=2091429429]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/GraphicsSettings/HBoxContainer/Column1Container/Resolution" unique_id=199361735]
-layout_mode = 2
-text = "Resolution"
-
-[node name="OptionButton" type="OptionButton" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/GraphicsSettings/HBoxContainer/Column1Container/Resolution" unique_id=1709460639]
-layout_mode = 2
-item_count = 1
-popup/item_0/text = "1920x1080"
-popup/item_0/id = 0
-
-[node name="Column2Container" type="VBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/GraphicsSettings/HBoxContainer" unique_id=1791510022]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="FullScreen" type="HBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/GraphicsSettings/HBoxContainer/Column2Container" unique_id=1237851035]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/GraphicsSettings/HBoxContainer/Column2Container/FullScreen" unique_id=966047628]
-layout_mode = 2
-text = "FullScreen"
-
-[node name="FullscreenCheckbox" type="CheckBox" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/GraphicsSettings/HBoxContainer/Column2Container/FullScreen" unique_id=1588030545]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="AudioSettings" type="MarginContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer" unique_id=239992223]
-layout_direction = 2
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-metadata/_tab_index = 1
-metadata/_tab_name = "Audio"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings" unique_id=521966094]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer" unique_id=426917219]
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="MasterVolumeLabel" type="Label" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer" unique_id=1545483126]
-layout_mode = 2
-text = "Master volumel"
-
-[node name="MasterVolumeSlider" type="HSlider" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer" unique_id=866855959]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer" unique_id=1202532156]
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="VBoxContainer" type="VBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2" unique_id=184567067]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1448969329]
-layout_mode = 2
-
-[node name="MusicVolumeLabel" type="Label" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer" unique_id=2079169754]
-layout_mode = 2
-text = "Music volume"
-
-[node name="MusicVolumeSlider" type="HSlider" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer" unique_id=2079103405]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2" unique_id=1475250250]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2/VBoxContainer2" unique_id=1886508492]
-layout_mode = 2
-
-[node name="SoundEffectsVolumeLabel" type="Label" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer" unique_id=1051613519]
-layout_mode = 2
-text = "Sound effects volume"
-
-[node name="SoundEffectsVolumeSlider" type="HSlider" parent="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer" unique_id=1842913019]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-
+[connection signal="pressed" from="OptionsContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="OptionsContainer/ExitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="pressed" from="SettingsPanel/VBoxContainer/HBoxContainer2/CloseButton" to="." method="_on_close_button_pressed"]
-[connection signal="toggled" from="SettingsPanel/VBoxContainer/SettingsTabContainer/GraphicsSettings/HBoxContainer/Column2Container/FullScreen/FullscreenCheckbox" to="." method="_on_fullscreen_check_box_toggled"]
-[connection signal="value_changed" from="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer/MasterVolumeSlider" to="." method="_on_master_volume_slider_value_changed"]
-[connection signal="value_changed" from="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
-[connection signal="value_changed" from="SettingsPanel/VBoxContainer/SettingsTabContainer/AudioSettings/VBoxContainer/HBoxContainer2/VBoxContainer2/HBoxContainer/SoundEffectsVolumeSlider" to="." method="_on_sound_effects_volume_slider_value_changed"]
