@@ -1,4 +1,4 @@
-# Overview
+<img width="984" height="998" alt="Kooha-2026-05-01-13-15-08" src="https://github.com/user-attachments/assets/d4b29552-beee-4c45-90a3-70a286a9e372" /># Overview
 This is a repository which contains some of my small personal modular projects made with the Godot game engine. These project are meant to be completely modular, which means that each one of them can be easily copied and pasted into any existing project and should work normally with little to no adjustments.
 
 # Mechanics
@@ -11,6 +11,11 @@ This mechanic involves 2 or more nodes which are pulled closer/pushed away depen
 <li>give the MagneticComponent a CollisionShape2D as a child.</li>
 <li>Assign the export variables</li>
 </ol>
+
+### Example
+<img width="984" height="998" alt="2d-magnetic-interaction-system-1" src="https://github.com/user-attachments/assets/cab6e342-fae7-4065-a9e4-ff4caca7cc68" />
+<img width="984" height="998" alt="2d-magnetic-interaction-system-2" src="https://github.com/user-attachments/assets/deb42370-28a6-479b-b9ef-20f86c77e8fe" />
+
 
 ## main-menu
 ### About
