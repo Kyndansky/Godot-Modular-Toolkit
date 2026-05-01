@@ -48,9 +48,18 @@ A simple settings system featuring:
 </ol>
 
 (The folders in which the settings.cfg file is saved depend on the operative system. see <a href="https://docs.godotengine.org/en/stable/classes/class_configfile.html#configfile">godot docs</a>)
-Windows: %APPDATA%\Godot\app_userdata\[project-name]\
-macOS: ~/Library/Application Support/Godot/app_userdata/[project-name]/
-Linux: ~/.local/share/godot/app_userdata/[project_name]/
+<ul>
+  <li>
+    Windows: %APPDATA%\Godot\app_userdata\[project-name]\
+  </li>
+  <li>
+    macOS: ~/Library/Application Support/Godot/app_userdata/[project-name]/
+  </li>
+  <li>
+    Linux: ~/.local/share/godot/app_userdata/[project_name]/
+  </li>
+</ul>
+
 
 # Permission
 Feel free to use any of the mechanics in this repository in any way, i don't care 
