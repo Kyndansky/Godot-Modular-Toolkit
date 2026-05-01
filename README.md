@@ -36,6 +36,7 @@ A simple settings system featuring:
 <ul>
 <li>A settings menu</li>
 <li>A settings.gd script which handles the change of settings</li>
+<li>The ability to save load settings to/from a .cfg file</li>
 </ul>
 
 ### Usage
@@ -43,7 +44,13 @@ A simple settings system featuring:
 <li>Copy all the files to your project (settings_menu.tscn and settings_menu.gd are optional)</li>
 <li>Add settings.gd to autoload</li>
 <li>To change an option from any script: ```Settings.varname=value```</li>
+<li>To save/load settings call Settings.save_settings_to_file() or Settings.load_settings_from_file()</li>
 </ol>
+
+(The folders in which the settings.cfg file is saved depend on the operative system. see <a href="https://docs.godotengine.org/en/stable/classes/class_configfile.html#configfile">godot docs</a>)
+Windows: %APPDATA%\Godot\app_userdata\[project-name]\
+macOS: ~/Library/Application Support/Godot/app_userdata/[project-name]/
+Linux: ~/.local/share/godot/app_userdata/[project_name]/
 
 # Permission
 Feel free to use any of the mechanics in this repository in any way, i don't care 
