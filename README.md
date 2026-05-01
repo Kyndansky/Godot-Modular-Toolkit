@@ -50,7 +50,7 @@ A simple settings system featuring:
 <li>To save/load settings call Settings.save_settings_to_file() or Settings.load_settings_from_file()</li>
 </ol>
 
-(The folders in which the settings.cfg file is saved depend on the operative system. see <a href="https://docs.godotengine.org/en/stable/classes/class_configfile.html#configfile">godot docs</a>)
+(The folders in which the settings.cfg file is saved depend on the operating system. see <a href="https://docs.godotengine.org/en/stable/classes/class_configfile.html#configfile">godot docs</a>)
 <ul>
   <li>
     Windows: %APPDATA%\Godot\app_userdata\[project-name]\
