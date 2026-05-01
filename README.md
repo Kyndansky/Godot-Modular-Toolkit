@@ -13,6 +13,7 @@ This mechanic involves 2 or more nodes which are pulled closer/pushed away depen
 </ol>
 
 ### Example
+Left: opposite polarity, Right: same polarity
 <img width="49%" height="998" alt="2d-magnetic-interaction-system-1" src="https://github.com/user-attachments/assets/cab6e342-fae7-4065-a9e4-ff4caca7cc68" /><img width="49%" height="998" alt="2d-magnetic-interaction-system-2" src="https://github.com/user-attachments/assets/deb42370-28a6-479b-b9ef-20f86c77e8fe" />
 
 
