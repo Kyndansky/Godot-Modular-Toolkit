@@ -28,8 +28,6 @@ A simple main menu scene with buttons to:
 </ul>
 
 ### Usage
-add signals to link your own systems (such as settings, etc...) to the buttons in the main menu
-
 <ol>
 <li>Copy main_menu.tscn and main_menu.gd to your project</li>
 <li>Add signals to make the button in the main menu perform any action you would like</li>
