@@ -11,7 +11,7 @@ radius = 232.31013
 size = Vector2(124, 128)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ig7tw"]
-radius = 160.61133
+radius = 306.02615
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(124, 128)
@@ -19,7 +19,7 @@ size = Vector2(124, 128)
 [node name="Main" type="Node2D" unique_id=467719186]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1688048631]
-position = Vector2(359, 19)
+position = Vector2(334, 459)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_h2yge")
 
@@ -40,7 +40,7 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("RectangleShape2D_h2yge")
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="." unique_id=927466791]
-position = Vector2(441, 153)
+position = Vector2(496, 425)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_h2yge")
 

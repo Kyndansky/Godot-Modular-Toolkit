@@ -11,7 +11,24 @@ extends Node
 signal volume_changed(type: String, value: float)
 signal fullscreen_changed(value: bool)
 
-enum Resolution { LOW, MID, HIGH }
+var common_resolutions = [
+	Vector2i(1280, 720),
+	Vector2i(1366, 768),
+	Vector2i(1600, 900),
+	Vector2i(1920, 1080),
+	Vector2i(2560, 1440),
+	Vector2i(3840, 2160)
+]
+
+func get_compatible_resolutions()-> Array:
+	var screen_index = DisplayServer.window_get_current_screen()
+	var max_res = DisplayServer.screen_get_size(screen_index)
+	var available = []
+	
+	for res in common_resolutions:
+		if res.x <= max_res.x and res.y <= max_res.y:
+			available.append(res)
+	return available
 
 var master_volume_level: float:
 	set(value):
@@ -57,7 +74,7 @@ func load_settings_from_file():
 	if err != OK:
 		return
 	
-	is_fullscreen=config.get_value("Display", "is_fullscreen")
+	is_fullscreen=config.get_value("Display", "is_fullscreen", false)
 	master_volume_level=config.get_value("Audio", "master_volume_level", 50.0)
 	music_volume_level=config.get_value("Audio", "music_volume_level", 75.0)
 	sound_effects_volume_level=config.get_value("Audio", "sound_effects_volume_level", 75.0)
