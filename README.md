@@ -12,6 +12,11 @@ This mechanic involves 2 or more nodes which are pulled closer/pushed away depen
 <li>Assign the export variables</li>
 </ol>
 
+### Example
+Left: opposite polarity, Right: same polarity <br>
+<img width="49%" height="998" alt="2d-magnetic-interaction-system-1" src="https://github.com/user-attachments/assets/cab6e342-fae7-4065-a9e4-ff4caca7cc68" /><img width="49%" height="998" alt="2d-magnetic-interaction-system-2" src="https://github.com/user-attachments/assets/deb42370-28a6-479b-b9ef-20f86c77e8fe" />
+
+
 ## main-menu
 ### About
 A simple main menu scene with buttons to:
@@ -23,8 +28,6 @@ A simple main menu scene with buttons to:
 </ul>
 
 ### Usage
-add signals to link your own systems (such as settings, etc...) to the buttons in the main menu
-
 <ol>
 <li>Copy main_menu.tscn and main_menu.gd to your project</li>
 <li>Add signals to make the button in the main menu perform any action you would like</li>
@@ -47,7 +50,7 @@ A simple settings system featuring:
 <li>To save/load settings call Settings.save_settings_to_file() or Settings.load_settings_from_file()</li>
 </ol>
 
-(The folders in which the settings.cfg file is saved depend on the operative system. see <a href="https://docs.godotengine.org/en/stable/classes/class_configfile.html#configfile">godot docs</a>)
+(The folders in which the settings.cfg file is saved depend on the operating system. see <a href="https://docs.godotengine.org/en/stable/classes/class_configfile.html#configfile">godot docs</a>)
 <ul>
   <li>
     Windows: %APPDATA%\Godot\app_userdata\[project-name]\
